@@ -134,6 +134,12 @@ services:
         fromDatabase:
           name: temporal
           property: host
+  - type: pserv
+    autoDeploy: false
+    name: temporal-datadog-agent
+    env: docker
+    dockerfilePath: ./temporal/datadog-agent/Dockerfile
+    dockerContext: ./temporal/datadog-agent
   - type: web
     autoDeploy: false
     name: temporal-ui

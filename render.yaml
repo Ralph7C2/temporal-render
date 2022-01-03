@@ -140,6 +140,9 @@ services:
     env: docker
     dockerfilePath: ./temporal/datadog-agent/Dockerfile
     dockerContext: ./temporal/datadog-agent
+    envVars:
+      - key: DD_API_KEY
+        sync: false
   - type: web
     autoDeploy: false
     name: temporal-ui
